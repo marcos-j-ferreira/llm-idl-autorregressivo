@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 from threading import Lock
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, make_response, request
 
 
 LLMS_DIR = Path(__file__).resolve().parents[1]
@@ -15,6 +15,17 @@ from inferencia import LLMInference  # noqa: E402
 
 DEFAULT_CONFIG_PATH = LLMS_DIR / "config.json"
 DEFAULT_WEIGHTS_PATH = LLMS_DIR / "model_weights.pth"
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*")
+CORS_HEADERS = "Content-Type, Authorization"
+CORS_METHODS = "GET, POST, OPTIONS"
+
+
+def _add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = CORS_ORIGINS
+    response.headers["Access-Control-Allow-Headers"] = CORS_HEADERS
+    response.headers["Access-Control-Allow-Methods"] = CORS_METHODS
+    response.headers["Access-Control-Max-Age"] = "86400"
+    return response
 
 
 def _to_int(value, default, field_name, minimum=None):
@@ -54,6 +65,15 @@ def create_app(
 ):
     app = Flask(__name__)
     app.config["JSON_AS_ASCII"] = False
+
+    @app.before_request
+    def handle_preflight():
+        if request.method == "OPTIONS":
+            return _add_cors_headers(make_response("", 204))
+
+    @app.after_request
+    def add_cors_headers(response):
+        return _add_cors_headers(response)
 
     resolved_config_path = Path(
         config_path or os.getenv("LLM_CONFIG_PATH", DEFAULT_CONFIG_PATH)
@@ -107,8 +127,11 @@ def create_app(
             }
         )
 
-    @app.post("/generate")
+    @app.route("/generate", methods=["POST", "OPTIONS"])
     def generate():
+        if request.method == "OPTIONS":
+            return _add_cors_headers(make_response("", 204))
+
         data = request.get_json(silent=True) or {}
         prompt = data.get("prompt")
 

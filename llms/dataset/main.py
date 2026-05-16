@@ -121,4 +121,4 @@ def gerar_dataset_txt(num_funcoes=800, nome_arquivo="dataset_python.txt"):
 
 # ===================== EXECUTAR =====================
 if __name__ == "__main__":
-    gerar_dataset_txt(num_funcoes=1000)   # Mude o número se quiser mais ou menos
+    gerar_dataset_txt(num_funcoes=3000)   # Mude o número se quiser mais ou menos
