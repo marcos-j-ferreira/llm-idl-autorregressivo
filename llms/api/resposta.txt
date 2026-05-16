@@ -1,0 +1,11 @@
+$ curl -X POST "http://127.0.0.1:5000/generate" -H "Content-Type: application/json" -d '{"prompt":"class Carro:", "temperature":1.0, "max_token":100}'
+
+
+{"device":"cuda","params":{"max_token":100,"temperature":1.0,"top_k":null,"top_p":null},"prompt":"class Carro:
+","response":"class car ro: self.saldo ric *= valor <= h _ nome = tr ar(self, 1] = = nome return resultado *=
+ac e < b def ano resultado ar }\" o return f\" += ar ato fi self.velocidade , al \u00f3 def f ): e return if r
+ange( expoente): resultado = if atual: 2 _ nome = o\" valor return al = + _ {self.velocid - {self. marc po []
+sel r return [0 \" return f\" if valor range( saldo_ini 2 { [0, (self): return ba f for , def de valor titular
+ self.velocidade self < in ato .ap s re his"}
+
+
