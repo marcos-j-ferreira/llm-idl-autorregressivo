@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "type": "python_code",
+    "code": "def soma(a, b):\n    return a + b",
+    "description": "Exemplo de código Python #1 - Função/Classe"
+  },
+  {
+    "id": 2,
+    "type": "python_code",
+    "code": "def multiplicar(x, y):\n    return x * y",
+    "description": "Exemplo de código Python #2 - Função/Classe"
+  },
+  {
+    "id": 3,
+    "type": "python_code",
+    "code": "def divisao(a, b):\n    if b == 0:\n        return \"Erro: divisao por zero\"\n    return a / b",
+    "description": "Exemplo de código Python #3 - Função/Classe"
+  },
+  {
+    "id": 4,
+    "type": "python_code",
+    "code": "\"\"\"Função gerada para treinamento.\"\"\"\ndef subtracao(a, b):\n    return a - b",
+    "description": "Exemplo de código Python #4 - Função/Classe"
+  },
+  {
+    "id": 5,
+    "type": "python_code",
+    "code": "def potencia(base, expoente):\n    resultado = 1\n    for _ in range(expoente):\n        resultado *= base\n    return resultado",
+    "description": "Exemplo de código Python #5 - Função/Classe"
+  },
+  {
+    "id": 6,
+    "type": "python_code",
+    "code": "def fibonacci(n):\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    seq = [0, 1]\n    for i in range(2, n):\n        seq.append(seq[-1] + seq[-2])\n    return seq",
+    "description": "Exemplo de código Python #6 - Função/Classe"
+  },
+  {
+    "id": 7,
+    "type": "python_code",
+    "code": "def fatorial(n):\n    if n < 0:\n        return None\n    resultado = 1\n    for i in range(1, n + 1):\n        resultado *= i\n    return resultado",
+    "description": "Exemplo de código Python #7 - Função/Classe"
+  },
+  {
+    "id": 8,
+    "type": "python_code",
+    "code": "def eh_par(numero):\n    return numero % 2 == 0",
+    "description": "Exemplo de código Python #8 - Função/Classe"
+  },
+  {
+    "id": 9,
+    "type": "python_code",
+    "code": "\"\"\"Função gerada para treinamento.\"\"\"\ndef eh_primo(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "description": "Exemplo de código Python #9 - Função/Classe"
+  },
+  {
+    "id": 10,
+    "type": "python_code",
+    "code": "def contar_vogais(texto):\n    vogais = \"aeiouAEIOU\"\n    return sum(1 for char in texto if char in vogais)",
+    "description": "Exemplo de código Python #10 - Função/Classe"
+  },
+  {
+    "id": 11,
+    "type": "python_code",
+    "code": "\"\"\"Função gerada para treinamento.\"\"\"\ndef inverter_string(s):\n    return s[::-1]",
+    "description": "Exemplo de código Python #11 - Função/Classe"
+  },
+  {
+    "id": 12,
+    "type": "python_code",
+    "code": "\"\"\"Função gerada para treinamento.\"\"\"\ndef palindromo(palavra):\n    return palavra.lower() == palavra.lower()[::-1]",
+    "description": "Exemplo de código Python #12 - Função/Classe"
+  }
+]

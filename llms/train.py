@@ -133,7 +133,7 @@ if __name__ == "__main__":
 
         val_loss = val_loss_total / len(val_loader)
 
-        if epoch % 100 == 0:
+        if epoch % 10 == 0:
             print(f"Epoch {epoch+1}/{epochs} | train_loss={loss.item():.4f} | val_loss={val_loss:.4f}")
 
         # — Early Stopping —

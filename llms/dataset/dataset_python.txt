@@ -1,0 +1,6075 @@
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_0(x, y):
+    resultado = x * y + 6
+    return resultado
+def soma(a, b):
+    return a + b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_6(x, y):
+    resultado = x * y + 50
+    return resultado
+def potencia(base, expoente):
+    return base ** expoente
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def funcao_extra_11(x, y):
+    resultado = x * y + 34
+    return resultado
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def maiusculas(texto):
+    return texto.upper()
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_17(x, y):
+    resultado = x * y + 49
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_20(x, y):
+    resultado = x * y + 37
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def subtracao(a, b):
+    return a - b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def maiusculas(texto):
+    return texto.upper()
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def somar_35(a, b):
+    return a + b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def soma(a, b):
+    return a + b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_39(x, y):
+    resultado = x * y + 6
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_43(x, y):
+    resultado = x * y + 12
+    return resultado
+def soma_lista(numeros):
+    return sum(numeros)
+
+def maiusculas(texto):
+    return texto.upper()
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def maiusculas(texto):
+    return texto.upper()
+
+def funcao_extra_50(x, y):
+    resultado = x * y + 18
+    return resultado
+def eh_par(numero):
+    return numero % 2 == 0
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_53(x, y):
+    resultado = x * y + 28
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_58(x, y):
+    resultado = x * y + 45
+    return resultado
+def somar_82(a, b):
+    return a + b
+
+def minusculas(texto):
+    return texto.lower()
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_61(x, y):
+    resultado = x * y + 19
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def subtracao(a, b):
+    return a - b
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_67(x, y):
+    resultado = x * y + 13
+    return resultado
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_69(x, y):
+    resultado = x * y + 11
+    return resultado
+def maiusculas(texto):
+    return texto.upper()
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_72(x, y):
+    resultado = x * y + 41
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def multiplicar(x, y):
+    return x * y
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_81(x, y):
+    resultado = x * y + 49
+    return resultado
+def potencia(base, expoente):
+    return base ** expoente
+
+def subtracao(a, b):
+    return a - b
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def maiusculas(texto):
+    return texto.upper()
+
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_86(x, y):
+    resultado = x * y + 15
+    return resultado
+def potencia(base, expoente):
+    return base ** expoente
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def subtracao(a, b):
+    return a - b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def funcao_extra_92(x, y):
+    resultado = x * y + 5
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def maiusculas(texto):
+    return texto.upper()
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def subtracao(a, b):
+    return a - b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def somar_46(a, b):
+    return a + b
+
+def funcao_extra_102(x, y):
+    resultado = x * y + 35
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_104(x, y):
+    resultado = x * y + 14
+    return resultado
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma(a, b):
+    return a + b
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def somar_96(a, b):
+    return a + b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def subtracao(a, b):
+    return a - b
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_114(x, y):
+    resultado = x * y + 17
+    return resultado
+def inverter_string(texto):
+    return texto[::-1]
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_120(x, y):
+    resultado = x * y + 37
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_122(x, y):
+    resultado = x * y + 40
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def maiusculas(texto):
+    return texto.upper()
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def soma(a, b):
+    return a + b
+
+def minusculas(texto):
+    return texto.lower()
+
+def subtracao(a, b):
+    return a - b
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_133(x, y):
+    resultado = x * y + 22
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma(a, b):
+    return a + b
+
+def soma(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def maiusculas(texto):
+    return texto.upper()
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_149(x, y):
+    resultado = x * y + 48
+    return resultado
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def funcao_extra_150(x, y):
+    resultado = x * y + 45
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_153(x, y):
+    resultado = x * y + 15
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def minusculas(texto):
+    return texto.lower()
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def subtracao(a, b):
+    return a - b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_159(x, y):
+    resultado = x * y + 1
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def multiplicar(x, y):
+    return x * y
+
+def somar_81(a, b):
+    return a + b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def subtracao(a, b):
+    return a - b
+
+def maiusculas(texto):
+    return texto.upper()
+
+def funcao_extra_170(x, y):
+    resultado = x * y + 24
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def soma(a, b):
+    return a + b
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def minusculas(texto):
+    return texto.lower()
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def subtracao(a, b):
+    return a - b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def soma(a, b):
+    return a + b
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_199(x, y):
+    resultado = x * y + 19
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def multiplicar(x, y):
+    return x * y
+
+def soma(a, b):
+    return a + b
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def multiplicar(x, y):
+    return x * y
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_208(x, y):
+    resultado = x * y + 34
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def subtracao(a, b):
+    return a - b
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def subtracao(a, b):
+    return a - b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def subtracao(a, b):
+    return a - b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def funcao_extra_220(x, y):
+    resultado = x * y + 3
+    return resultado
+def somar_13(a, b):
+    return a + b
+
+def somar_6(a, b):
+    return a + b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_223(x, y):
+    resultado = x * y + 9
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def subtracao(a, b):
+    return a - b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def funcao_extra_234(x, y):
+    resultado = x * y + 28
+    return resultado
+def minusculas(texto):
+    return texto.lower()
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def somar_33(a, b):
+    return a + b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def funcao_extra_249(x, y):
+    resultado = x * y + 38
+    return resultado
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def soma(a, b):
+    return a + b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def minusculas(texto):
+    return texto.lower()
+
+def funcao_extra_260(x, y):
+    resultado = x * y + 8
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_261(x, y):
+    resultado = x * y + 20
+    return resultado
+def soma(a, b):
+    return a + b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_266(x, y):
+    resultado = x * y + 31
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def subtracao(a, b):
+    return a - b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_270(x, y):
+    resultado = x * y + 35
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_272(x, y):
+    resultado = x * y + 32
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maiusculas(texto):
+    return texto.upper()
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_278(x, y):
+    resultado = x * y + 12
+    return resultado
+def eh_par(numero):
+    return numero % 2 == 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_283(x, y):
+    resultado = x * y + 25
+    return resultado
+def soma_lista(numeros):
+    return sum(numeros)
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def funcao_extra_285(x, y):
+    resultado = x * y + 29
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_288(x, y):
+    resultado = x * y + 28
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def minusculas(texto):
+    return texto.lower()
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_294(x, y):
+    resultado = x * y + 30
+    return resultado
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def funcao_extra_295(x, y):
+    resultado = x * y + 37
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def soma(a, b):
+    return a + b
+
+def soma(a, b):
+    return a + b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def subtracao(a, b):
+    return a - b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def multiplicar(x, y):
+    return x * y
+
+def minusculas(texto):
+    return texto.lower()
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def funcao_extra_311(x, y):
+    resultado = x * y + 22
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def minusculas(texto):
+    return texto.lower()
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def subtracao(a, b):
+    return a - b
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_320(x, y):
+    resultado = x * y + 35
+    return resultado
+def potencia(base, expoente):
+    return base ** expoente
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_322(x, y):
+    resultado = x * y + 19
+    return resultado
+def eh_par(numero):
+    return numero % 2 == 0
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def funcao_extra_325(x, y):
+    resultado = x * y + 44
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def funcao_extra_327(x, y):
+    resultado = x * y + 48
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_329(x, y):
+    resultado = x * y + 31
+    return resultado
+def inverter_string(texto):
+    return texto[::-1]
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def funcao_extra_331(x, y):
+    resultado = x * y + 49
+    return resultado
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def minusculas(texto):
+    return texto.lower()
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_336(x, y):
+    resultado = x * y + 31
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def multiplicar(x, y):
+    return x * y
+
+def soma(a, b):
+    return a + b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def multiplicar(x, y):
+    return x * y
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_343(x, y):
+    resultado = x * y + 34
+    return resultado
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def minusculas(texto):
+    return texto.lower()
+
+def funcao_extra_355(x, y):
+    resultado = x * y + 45
+    return resultado
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def subtracao(a, b):
+    return a - b
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def maiusculas(texto):
+    return texto.upper()
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_366(x, y):
+    resultado = x * y + 46
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def funcao_extra_370(x, y):
+    resultado = x * y + 19
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def funcao_extra_372(x, y):
+    resultado = x * y + 9
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def funcao_extra_380(x, y):
+    resultado = x * y + 42
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_383(x, y):
+    resultado = x * y + 16
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_386(x, y):
+    resultado = x * y + 31
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def maiusculas(texto):
+    return texto.upper()
+
+def soma(a, b):
+    return a + b
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def maiusculas(texto):
+    return texto.upper()
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_397(x, y):
+    resultado = x * y + 22
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def funcao_extra_404(x, y):
+    resultado = x * y + 1
+    return resultado
+def minusculas(texto):
+    return texto.lower()
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_409(x, y):
+    resultado = x * y + 10
+    return resultado
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def funcao_extra_410(x, y):
+    resultado = x * y + 25
+    return resultado
+def potencia(base, expoente):
+    return base ** expoente
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def multiplicar(x, y):
+    return x * y
+
+def somar_4(a, b):
+    return a + b
+
+def minusculas(texto):
+    return texto.lower()
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def minusculas(texto):
+    return texto.lower()
+
+def multiplicar(x, y):
+    return x * y
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def minusculas(texto):
+    return texto.lower()
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_426(x, y):
+    resultado = x * y + 28
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_433(x, y):
+    resultado = x * y + 40
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def subtracao(a, b):
+    return a - b
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def soma(a, b):
+    return a + b
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def minusculas(texto):
+    return texto.lower()
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def minusculas(texto):
+    return texto.lower()
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def subtracao(a, b):
+    return a - b
+
+def minusculas(texto):
+    return texto.lower()
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def multiplicar(x, y):
+    return x * y
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_471(x, y):
+    resultado = x * y + 8
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def funcao_extra_474(x, y):
+    resultado = x * y + 32
+    return resultado
+def minusculas(texto):
+    return texto.lower()
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def multiplicar(x, y):
+    return x * y
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def soma(a, b):
+    return a + b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def funcao_extra_485(x, y):
+    resultado = x * y + 11
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def minusculas(texto):
+    return texto.lower()
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def funcao_extra_491(x, y):
+    resultado = x * y + 15
+    return resultado
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_495(x, y):
+    resultado = x * y + 43
+    return resultado
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def multiplicar(x, y):
+    return x * y
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def maiusculas(texto):
+    return texto.upper()
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def multiplicar(x, y):
+    return x * y
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def funcao_extra_511(x, y):
+    resultado = x * y + 26
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_520(x, y):
+    resultado = x * y + 37
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def multiplicar(x, y):
+    return x * y
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def minusculas(texto):
+    return texto.lower()
+
+def multiplicar(x, y):
+    return x * y
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def minusculas(texto):
+    return texto.lower()
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def multiplicar(x, y):
+    return x * y
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def somar_35(a, b):
+    return a + b
+
+def maiusculas(texto):
+    return texto.upper()
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_541(x, y):
+    resultado = x * y + 35
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def minusculas(texto):
+    return texto.lower()
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_547(x, y):
+    resultado = x * y + 11
+    return resultado
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_549(x, y):
+    resultado = x * y + 26
+    return resultado
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def subtracao(a, b):
+    return a - b
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_553(x, y):
+    resultado = x * y + 35
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def soma(a, b):
+    return a + b
+
+def multiplicar(x, y):
+    return x * y
+
+def soma(a, b):
+    return a + b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_560(x, y):
+    resultado = x * y + 7
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def somar_57(a, b):
+    return a + b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_570(x, y):
+    resultado = x * y + 41
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def minusculas(texto):
+    return texto.lower()
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_576(x, y):
+    resultado = x * y + 44
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def subtracao(a, b):
+    return a - b
+
+def soma(a, b):
+    return a + b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def subtracao(a, b):
+    return a - b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_586(x, y):
+    resultado = x * y + 40
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def soma(a, b):
+    return a + b
+
+def maiusculas(texto):
+    return texto.upper()
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def funcao_extra_596(x, y):
+    resultado = x * y + 15
+    return resultado
+def soma(a, b):
+    return a + b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def subtracao(a, b):
+    return a - b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def somar_26(a, b):
+    return a + b
+
+def funcao_extra_607(x, y):
+    resultado = x * y + 27
+    return resultado
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def funcao_extra_612(x, y):
+    resultado = x * y + 36
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def somar_2(a, b):
+    return a + b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_615(x, y):
+    resultado = x * y + 40
+    return resultado
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_621(x, y):
+    resultado = x * y + 13
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_624(x, y):
+    resultado = x * y + 41
+    return resultado
+def inverter_string(texto):
+    return texto[::-1]
+
+def soma(a, b):
+    return a + b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def somar_47(a, b):
+    return a + b
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_632(x, y):
+    resultado = x * y + 27
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_637(x, y):
+    resultado = x * y + 42
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_648(x, y):
+    resultado = x * y + 17
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_649(x, y):
+    resultado = x * y + 42
+    return resultado
+def maiusculas(texto):
+    return texto.upper()
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def subtracao(a, b):
+    return a - b
+
+def maiusculas(texto):
+    return texto.upper()
+
+def funcao_extra_655(x, y):
+    resultado = x * y + 30
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_656(x, y):
+    resultado = x * y + 36
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_657(x, y):
+    resultado = x * y + 28
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_658(x, y):
+    resultado = x * y + 27
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def funcao_extra_659(x, y):
+    resultado = x * y + 24
+    return resultado
+def maiusculas(texto):
+    return texto.upper()
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_662(x, y):
+    resultado = x * y + 7
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def somar_91(a, b):
+    return a + b
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def multiplicar(x, y):
+    return x * y
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def soma(a, b):
+    return a + b
+
+def multiplicar(x, y):
+    return x * y
+
+def minusculas(texto):
+    return texto.lower()
+
+def funcao_extra_675(x, y):
+    resultado = x * y + 1
+    return resultado
+def soma_lista(numeros):
+    return sum(numeros)
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def multiplicar(x, y):
+    return x * y
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def soma(a, b):
+    return a + b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def soma(a, b):
+    return a + b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_687(x, y):
+    resultado = x * y + 7
+    return resultado
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_689(x, y):
+    resultado = x * y + 38
+    return resultado
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def multiplicar(x, y):
+    return x * y
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def multiplicar(x, y):
+    return x * y
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_700(x, y):
+    resultado = x * y + 31
+    return resultado
+def eh_par(numero):
+    return numero % 2 == 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def funcao_extra_703(x, y):
+    resultado = x * y + 32
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def multiplicar(x, y):
+    return x * y
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_707(x, y):
+    resultado = x * y + 4
+    return resultado
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def minusculas(texto):
+    return texto.lower()
+
+def somar_26(a, b):
+    return a + b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def minusculas(texto):
+    return texto.lower()
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma(a, b):
+    return a + b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_720(x, y):
+    resultado = x * y + 23
+    return resultado
+def potencia(base, expoente):
+    return base ** expoente
+
+def multiplicar(x, y):
+    return x * y
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def funcao_extra_724(x, y):
+    resultado = x * y + 49
+    return resultado
+def maiusculas(texto):
+    return texto.upper()
+
+def subtracao(a, b):
+    return a - b
+
+def multiplicar(x, y):
+    return x * y
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def minusculas(texto):
+    return texto.lower()
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def multiplicar(x, y):
+    return x * y
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_734(x, y):
+    resultado = x * y + 24
+    return resultado
+def maiusculas(texto):
+    return texto.upper()
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_736(x, y):
+    resultado = x * y + 21
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def soma(a, b):
+    return a + b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def subtracao(a, b):
+    return a - b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_751(x, y):
+    resultado = x * y + 46
+    return resultado
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def subtracao(a, b):
+    return a - b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def maiusculas(texto):
+    return texto.upper()
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def funcao_extra_759(x, y):
+    resultado = x * y + 8
+    return resultado
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_760(x, y):
+    resultado = x * y + 15
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def soma(a, b):
+    return a + b
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_766(x, y):
+    resultado = x * y + 25
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_767(x, y):
+    resultado = x * y + 34
+    return resultado
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_770(x, y):
+    resultado = x * y + 42
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def multiplicar(x, y):
+    return x * y
+
+def subtracao(a, b):
+    return a - b
+
+def minusculas(texto):
+    return texto.lower()
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_776(x, y):
+    resultado = x * y + 39
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_778(x, y):
+    resultado = x * y + 35
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def maiusculas(texto):
+    return texto.upper()
+
+def funcao_extra_780(x, y):
+    resultado = x * y + 29
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_781(x, y):
+    resultado = x * y + 28
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def minusculas(texto):
+    return texto.lower()
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_787(x, y):
+    resultado = x * y + 50
+    return resultado
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def maiusculas(texto):
+    return texto.upper()
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def soma(a, b):
+    return a + b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_799(x, y):
+    resultado = x * y + 32
+    return resultado
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def multiplicar(x, y):
+    return x * y
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def funcao_extra_803(x, y):
+    resultado = x * y + 35
+    return resultado
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def minusculas(texto):
+    return texto.lower()
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_806(x, y):
+    resultado = x * y + 29
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_808(x, y):
+    resultado = x * y + 10
+    return resultado
+def eh_par(numero):
+    return numero % 2 == 0
+
+def maiusculas(texto):
+    return texto.upper()
+
+def soma(a, b):
+    return a + b
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def soma(a, b):
+    return a + b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def inverter_string(texto):
+    return texto[::-1]
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_819(x, y):
+    resultado = x * y + 46
+    return resultado
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def multiplicar(x, y):
+    return x * y
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_829(x, y):
+    resultado = x * y + 39
+    return resultado
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def somar_82(a, b):
+    return a + b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def soma(a, b):
+    return a + b
+
+def maiusculas(texto):
+    return texto.upper()
+
+def funcao_extra_835(x, y):
+    resultado = x * y + 23
+    return resultado
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def funcao_extra_836(x, y):
+    resultado = x * y + 35
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def funcao_extra_839(x, y):
+    resultado = x * y + 3
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def funcao_extra_845(x, y):
+    resultado = x * y + 1
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maiusculas(texto):
+    return texto.upper()
+
+def subtracao(a, b):
+    return a - b
+
+def funcao_extra_851(x, y):
+    resultado = x * y + 47
+    return resultado
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def funcao_extra_852(x, y):
+    resultado = x * y + 16
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def funcao_extra_855(x, y):
+    resultado = x * y + 19
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_856(x, y):
+    resultado = x * y + 13
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def funcao_extra_857(x, y):
+    resultado = x * y + 14
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def subtracao(a, b):
+    return a - b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_867(x, y):
+    resultado = x * y + 45
+    return resultado
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def funcao_extra_870(x, y):
+    resultado = x * y + 17
+    return resultado
+def soma(a, b):
+    return a + b
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def somar_56(a, b):
+    return a + b
+
+def funcao_extra_873(x, y):
+    resultado = x * y + 9
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_874(x, y):
+    resultado = x * y + 14
+    return resultado
+def minusculas(texto):
+    return texto.lower()
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_879(x, y):
+    resultado = x * y + 36
+    return resultado
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def multiplicar(x, y):
+    return x * y
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_883(x, y):
+    resultado = x * y + 19
+    return resultado
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def minusculas(texto):
+    return texto.lower()
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def soma(a, b):
+    return a + b
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def multiplicar(x, y):
+    return x * y
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def maiusculas(texto):
+    return texto.upper()
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_896(x, y):
+    resultado = x * y + 44
+    return resultado
+def somar_14(a, b):
+    return a + b
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maiusculas(texto):
+    return texto.upper()
+
+def funcao_extra_900(x, y):
+    resultado = x * y + 31
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_904(x, y):
+    resultado = x * y + 15
+    return resultado
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def funcao_extra_905(x, y):
+    resultado = x * y + 30
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def multiplicar(x, y):
+    return x * y
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def subtracao(a, b):
+    return a - b
+
+def minusculas(texto):
+    return texto.lower()
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_912(x, y):
+    resultado = x * y + 38
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def multiplicar(x, y):
+    return x * y
+
+def multiplicar(x, y):
+    return x * y
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma(a, b):
+    return a + b
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def multiplicar(x, y):
+    return x * y
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def multiplicar(x, y):
+    return x * y
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def soma(a, b):
+    return a + b
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def inverter_string(texto):
+    return texto[::-1]
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def subtracao(a, b):
+    return a - b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maiusculas(texto):
+    return texto.upper()
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def subtracao(a, b):
+    return a - b
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_947(x, y):
+    resultado = x * y + 16
+    return resultado
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def maiusculas(texto):
+    return texto.upper()
+
+def multiplicar(x, y):
+    return x * y
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_953(x, y):
+    resultado = x * y + 32
+    return resultado
+def soma(a, b):
+    return a + b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma(a, b):
+    return a + b
+
+def media_lista(numeros):
+    return sum(numeros) / len(numeros) if numeros else 0
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def funcao_extra_969(x, y):
+    resultado = x * y + 48
+    return resultado
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def funcao_extra_973(x, y):
+    resultado = x * y + 3
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def somar_41(a, b):
+    return a + b
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def maiusculas(texto):
+    return texto.upper()
+
+def funcao_extra_985(x, y):
+    resultado = x * y + 32
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def multiplicar(x, y):
+    return x * y
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def maiusculas(texto):
+    return texto.upper()
+
+def potencia(base, expoente):
+    return base ** expoente
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def multiplicar(x, y):
+    return x * y
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def funcao_extra_997(x, y):
+    resultado = x * y + 12
+    return resultado
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
