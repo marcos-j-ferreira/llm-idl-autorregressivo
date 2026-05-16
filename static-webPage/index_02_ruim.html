@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>LLM IDL Chat - Assistente com Destaque de Prompt</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      height: 100vh;
+      overflow: hidden;
+      color: #1a1a1a;
+    }
+
+    .app-shell {
+      display: flex;
+      height: 100vh;
+      max-width: 1600px;
+      margin: 0 auto;
+      background: #f7f9fc;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      background: #ffffff;
+      border-right: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 16px;
+      gap: 20px;
+      overflow-y: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .brand p {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+
+    .new-chat-button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .new-chat-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .chat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .chat-item {
+      padding: 10px 12px;
+      background: transparent;
+      border: none;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 14px;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.2s;
+      word-break: break-word;
+    }
+
+    .chat-item:hover {
+      background: #f3f4f6;
+    }
+
+    .chat-item.active {
+      background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+      color: #667eea;
+      font-weight: 500;
+      border-left: 3px solid #667eea;
+    }
+
+    /* Chat Panel */
+    .chat-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+
+    .chat-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .chat-header h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .chat-header p {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .controls label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #4b5563;
+    }
+
+    .controls input[type="number"] {
+      width: 70px;
+      padding: 6px 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 13px;
+      background: white;
+    }
+
+    /* Toggle Switch */
+    .toggle-switch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 6px 10px;
+      background: #f3f4f6;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+
+    .toggle-switch:hover {
+      background: #e5e7eb;
+    }
+
+    .toggle-switch input {
+      width: 40px;
+      height: 22px;
+      appearance: none;
+      background: #cbd5e1;
+      border-radius: 20px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .toggle-switch input:checked {
+      background: #10b981;
+    }
+
+    .toggle-switch input::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: white;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s;
+    }
+
+    .toggle-switch input:checked::before {
+      transform: translateX(18px);
+    }
+
+    .toggle-switch span {
+      font-size: 12px;
+      font-weight: 500;
+      color: #4b5563;
+    }
+
+    /* Messages Area */
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: #fafbfc;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #6b7280;
+    }
+
+    .empty-state h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #374151;
+    }
+
+    .empty-state p {
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+
+    .quick-prompts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .quick-prompts button {
+      padding: 8px 16px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quick-prompts button:hover {
+      background: #667eea;
+      color: white;
+      border-color: #667eea;
+    }
+
+    /* Message Bubbles */
+    .message {
+      display: flex;
+      gap: 12px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .message.user .avatar {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .message.assistant .avatar {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .message.error .avatar {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .bubble {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 16px;
+      line-height: 1.5;
+      font-size: 14px;
+      word-wrap: break-word;
+    }
+
+    .message.user .bubble {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .message.assistant .bubble {
+      background: white;
+      border: 1px solid #e5e7eb;
+      color: #1f2937;
+    }
+
+    .message.error .bubble {
+      background: #fee2e2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+    }
+
+    /* Markdown Styles */
+    .markdown {
+      line-height: 1.6;
+    }
+
+    .markdown p {
+      margin-bottom: 12px;
+    }
+
+    .markdown code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+    }
+
+    .markdown pre {
+      background: #1f2937;
+      padding: 16px;
+      border-radius: 12px;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+
+    .markdown pre code {
+      background: none;
+      color: #e5e7eb;
+      padding: 0;
+    }
+
+    .code-card {
+      margin: 12px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .code-card-header {
+      background: #f3f4f6;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .markdown ul, .markdown ol {
+      margin: 12px 0;
+      padding-left: 24px;
+    }
+
+    .markdown li {
+      margin: 6px 0;
+    }
+
+    .markdown strong {
+      font-weight: 600;
+      color: #667eea;
+    }
+
+    /* Syntax Highlighting */
+    .token-keyword {
+      color: #ff79c6;
+      font-weight: bold;
+    }
+
+    .token-string {
+      color: #50fa7b;
+    }
+
+    .token-comment {
+      color: #6272a4;
+      font-style: italic;
+    }
+
+    .token-number {
+      color: #bd93f9;
+    }
+
+    .token-function {
+      color: #8be9fd;
+    }
+
+    /* Highlight do Prompt */
+    mark.prompt-highlight {
+      background-color: #fef08a;
+      color: #1a1a1a;
+      padding: 2px 4px;
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      transition: background 0.2s;
+    }
+
+    /* Typing Animation */
+    .typing {
+      display: flex;
+      gap: 4px;
+      padding: 8px 0;
+    }
+
+    .typing span {
+      width: 8px;
+      height: 8px;
+      background: #9ca3af;
+      border-radius: 50%;
+      animation: typing 1.4s infinite;
+    }
+
+    .typing span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typing {
+      0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+      }
+      30% {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+    }
+
+    /* Composer */
+    .composer {
+      padding: 20px 24px;
+      border-top: 1px solid #e5e7eb;
+      background: white;
+    }
+
+    #prompt-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 14px;
+      resize: vertical;
+      transition: border-color 0.2s;
+    }
+
+    #prompt-input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .composer-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    #hint {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    #send-button {
+      padding: 8px 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    #send-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);
+      }
+
+      .app-shell {
+        background: #1f2937;
+      }
+
+      .sidebar {
+        background: #111827;
+        border-right-color: #374151;
+      }
+
+      .brand h1 {
+        color: #f3f4f6;
+      }
+
+      .chat-item {
+        color: #d1d5db;
+      }
+
+      .chat-item:hover {
+        background: #374151;
+      }
+
+      .chat-panel {
+        background: #1f2937;
+      }
+
+      .chat-header {
+        background: #111827;
+        border-bottom-color: #374151;
+      }
+
+      .chat-header h2 {
+        color: #f3f4f6;
+      }
+
+      .controls label {
+        color: #d1d5db;
+      }
+
+      .controls input[type="number"] {
+        background: #374151;
+        border-color: #4b5563;
+        color: #f3f4f6;
+      }
+
+      .toggle-switch {
+        background: #374151;
+      }
+
+      .toggle-switch:hover {
+        background: #4b5563;
+      }
+
+      .toggle-switch span {
+        color: #d1d5db;
+      }
+
+      .messages {
+        background: #1f2937;
+      }
+
+      .empty-state {
+        color: #9ca3af;
+      }
+
+      .empty-state h3 {
+        color: #f3f4f6;
+      }
+
+      .quick-prompts button {
+        background: #374151;
+        border-color: #4b5563;
+        color: #f3f4f6;
+      }
+
+      .message.assistant .avatar {
+        background: #374151;
+        color: #f3f4f6;
+      }
+
+      .message.assistant .bubble {
+        background: #111827;
+        border-color: #374151;
+        color: #f3f4f6;
+      }
+
+      .markdown code {
+        background: #374151;
+        color: #f3f4f6;
+      }
+
+      .code-card {
+        border-color: #374151;
+      }
+
+      .code-card-header {
+        background: #111827;
+        border-bottom-color: #374151;
+        color: #f3f4f6;
+      }
+
+      mark.prompt-highlight {
+        background-color: #f59e0b;
+        color: #1a1a1a;
+      }
+
+      .composer {
+        background: #111827;
+        border-top-color: #374151;
+      }
+
+      #prompt-input {
+        background: #374151;
+        border-color: #4b5563;
+        color: #f3f4f6;
+      }
+
+      #hint {
+        color: #9ca3af;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar" aria-label="Conversas">
+      <div class="brand">
+        <div class="brand-mark">LLM</div>
+        <div>
+          <h1>IDL Chat</h1>
+          <p id="api-status">API aguardando</p>
+        </div>
+      </div>
+
+      <button class="new-chat-button" id="new-chat-button" type="button">
+        <span aria-hidden="true">+</span>
+        Novo chat
+      </button>
+
+      <div class="chat-list" id="chat-list" aria-label="Lista de chats"></div>
+    </aside>
+
+    <section class="chat-panel" aria-label="Chat">
+      <header class="chat-header">
+        <div>
+          <h2 id="chat-title">Novo chat</h2>
+          <p id="chat-subtitle">http://127.0.0.1:5000/generate</p>
+        </div>
+
+        <div class="controls">
+          <label>
+            Temp
+            <input id="temperature-input" type="number" min="0.1" max="2" step="0.1" value="1.0">
+          </label>
+
+          <label>
+            Tokens
+            <input id="tokens-input" type="number" min="1" max="1000" step="1" value="100">
+          </label>
+
+          <label class="toggle-switch">
+            <input id="highlight-toggle" type="checkbox">
+            <span>🎯 Destacar Prompt</span>
+          </label>
+        </div>
+      </header>
+
+      <div class="messages" id="messages" aria-live="polite"></div>
+
+      <form class="composer" id="composer">
+        <textarea
+          id="prompt-input"
+          rows="3"
+          placeholder="Digite seu prompt... Ex: Em uma pequena vila cercada por"
+          autocomplete="off"
+          spellcheck="false"
+        ></textarea>
+
+        <div class="composer-actions">
+          <span id="hint">⏎ Enter envia | ⇧ Shift+Enter quebra linha</span>
+          <button id="send-button" type="submit">📤 Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const API_URL = "http://127.0.0.1:5000/generate";
+    const HEALTH_URL = "http://127.0.0.1:5000/health";
+
+    const chatListEl = document.querySelector("#chat-list");
+    const messagesEl = document.querySelector("#messages");
+    const composerEl = document.querySelector("#composer");
+    const promptInputEl = document.querySelector("#prompt-input");
+    const sendButtonEl = document.querySelector("#send-button");
+    const newChatButtonEl = document.querySelector("#new-chat-button");
+    const chatTitleEl = document.querySelector("#chat-title");
+    const statusEl = document.querySelector("#api-status");
+    const temperatureInputEl = document.querySelector("#temperature-input");
+    const tokensInputEl = document.querySelector("#tokens-input");
+    const highlightToggleEl = document.querySelector("#highlight-toggle");
+
+    let chats = [];
+    let activeChatId = null;
+    let isGenerating = false;
+    let activeTypingTimer = null;
+    let highlightPromptEnabled = false;
+
+    // Toggle highlight mode
+    highlightToggleEl.addEventListener("change", (event) => {
+      highlightPromptEnabled = event.target.checked;
+      render(); // Re-render to apply highlight to existing messages
+    });
+
+    function createChat() {
+      const chat = {
+        id: createId(),
+        title: "Novo chat",
+        messages: [],
+        createdAt: new Date().toISOString(),
+      };
+
+      chats.unshift(chat);
+      activeChatId = chat.id;
+      render();
+      promptInputEl.focus();
+    }
+
+    function createId() {
+      if (window.crypto && typeof window.crypto.randomUUID === "function") {
+        return window.crypto.randomUUID();
+      }
+      return `chat-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    }
+
+    function getActiveChat() {
+      return chats.find((chat) => chat.id === activeChatId);
+    }
+
+    function updateChatTitle(chat, prompt) {
+      if (chat.title !== "Novo chat") {
+        return;
+      }
+      const clean = prompt.replace(/\s+/g, " ").trim();
+      chat.title = clean.length > 34 ? `${clean.slice(0, 34)}...` : clean || "Novo chat";
+    }
+
+    function escapeHtml(value) {
+      return value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function looksLikeCodeRequest(prompt) {
+      return /\b(c[oó]digo|funcao|fun[cç][aã]o|classe|python|script|programa|implemente|crie|def |class )\b/i.test(prompt);
+    }
+
+    function looksLikePythonCode(text) {
+      return /(^|\n)\s*(def|class|for|while|if|elif|else|try|except|return|import|from|with)\b/.test(text)
+        || /(^|\n)\s*[a-zA-Z_]\w*\s*=/.test(text)
+        || text.includes("self.");
+    }
+
+    function formatPythonLikeCode(text) {
+      const trimmed = text.trim();
+      if (trimmed.includes("\n")) {
+        return trimmed;
+      }
+      return trimmed
+        .replace(/\s+(class\s+[A-Za-z_]\w*)/g, "\n$1")
+        .replace(/\s+(def\s+[A-Za-z_]\w*)/g, "\n$1")
+        .replace(/\s+(elif\b|else:|except\b|finally:)/g, "\n$1")
+        .replace(/\s+(if\b|for\b|while\b|try:|with\b)/g, "\n    $1")
+        .replace(/\s+(return\b|import\b|from\b|pass\b|break\b|continue\b|raise\b)/g, "\n    $1")
+        .replace(/:\s+(?=(self\.|[A-Za-z_]\w*\s*=|return\b|if\b|for\b|while\b))/g, ":\n    ")
+        .replace(/;\s*/g, "\n    ")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+    }
+
+    function ensureCodeBlockWhenNeeded(prompt, response) {
+      const hasFence = /```/.test(response);
+      if (hasFence || (!looksLikeCodeRequest(prompt) && !looksLikePythonCode(response))) {
+        return response;
+      }
+      return `\`\`\`py\n${formatPythonLikeCode(response)}\n\`\`\``;
+    }
+
+    function highlightPython(escapedCode) {
+      const protectedParts = [];
+      const protect = (html) => {
+        const key = `@@TOKEN_${protectedParts.length}@@`;
+        protectedParts.push(html);
+        return key;
+      };
+
+      const highlighted = escapedCode
+        .replace(/(&quot;.*?&quot;|&#039;.*?&#039;)/g, (match) => protect(`<span class="token-string">${match}</span>`))
+        .replace(/(#.*)$/gm, (match) => protect(`<span class="token-comment">${match}</span>`))
+        .replace(/\b(class|def|return|if|elif|else|for|while|in|import|from|as|try|except|finally|with|pass|break|continue|self|None|True|False)\b/g, '<span class="token-keyword">$1</span>')
+        .replace(/\b(\d+(?:\.\d+)?)\b/g, '<span class="token-number">$1</span>')
+        .replace(/\b([a-zA-Z_]\w*)(?=\()/g, '<span class="token-function">$1</span>');
+
+      return highlighted.replace(/@@TOKEN_(\d+)@@/g, (_, index) => protectedParts[Number(index)]);
+    }
+
+    function renderInlineMarkdown(text) {
+      return escapeHtml(text)
+        .replace(/`([^`]+)`/g, "<code>$1</code>")
+        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    }
+
+    function highlightPromptInResponse(prompt, response) {
+      if (!highlightPromptEnabled || !prompt || !response) {
+        return response;
+      }
+      
+      const cleanPrompt = prompt.trim();
+      const cleanResponse = response;
+      
+      if (cleanResponse.startsWith(cleanPrompt)) {
+        const highlightedPrompt = `<mark class="prompt-highlight">${escapeHtml(cleanPrompt)}</mark>`;
+        const remainingResponse = escapeHtml(cleanResponse.slice(cleanPrompt.length));
+        return highlightedPrompt + remainingResponse;
+      }
+      
+      const promptIndex = cleanResponse.indexOf(cleanPrompt);
+      if (promptIndex !== -1) {
+        const beforePrompt = escapeHtml(cleanResponse.slice(0, promptIndex));
+        const highlightedPrompt = `<mark class="prompt-highlight">${escapeHtml(cleanPrompt)}</mark>`;
+        const afterPrompt = escapeHtml(cleanResponse.slice(promptIndex + cleanPrompt.length));
+        return beforePrompt + highlightedPrompt + afterPrompt;
+      }
+      
+      const promptWords = cleanPrompt.split(/\s+/);
+      const responseWords = cleanResponse.split(/\s+/);
+      
+      for (let i = 0; i <= responseWords.length - promptWords.length; i++) {
+        let match = true;
+        for (let j = 0; j < promptWords.length; j++) {
+          if (responseWords[i + j] !== promptWords[j]) {
+            match = false;
+            break;
+          }
+        }
+        if (match) {
+          const matchedText = responseWords.slice(i, i + promptWords.length).join(' ');
+          const beforeMatch = responseWords.slice(0, i).join(' ');
+          const afterMatch = responseWords.slice(i + promptWords.length).join(' ');
+          
+          return `${escapeHtml(beforeMatch)}${beforeMatch ? ' ' : ''}<mark class="prompt-highlight">${escapeHtml(matchedText)}</mark>${afterMatch ? ' ' + escapeHtml(afterMatch) : ''}`;
+        }
+      }
+      
+      return escapeHtml(response);
+    }
+
+    function renderMarkdown(markdown) {
+      const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+      const html = [];
+      let inCode = false;
+      let codeLines = [];
+      let codeLanguage = "";
+      let listType = null;
+
+      function closeList() {
+        if (listType) {
+          html.push(`</${listType}>`);
+          listType = null;
+        }
+      }
+
+      function closeCode() {
+        if (inCode) {
+          const languageLabel = codeLanguage || "text";
+          const escapedCode = codeLines.join("\n");
+          const highlightedCode = ["py", "python"].includes(languageLabel.toLowerCase())
+            ? highlightPython(escapeHtml(escapedCode))
+            : escapeHtml(escapedCode);
+
+          html.push(`
+            <div class="code-card">
+              <div class="code-card-header">
+                <span>${escapeHtml(languageLabel)}</span>
+              </div>
+              <pre><code>${highlightedCode}</code></pre>
+            </div>
+          `);
+          codeLines = [];
+          codeLanguage = "";
+          inCode = false;
+        }
+      }
+
+      for (const line of lines) {
+        if (line.trim().startsWith("```")) {
+          if (inCode) {
+            closeCode();
+          } else {
+            closeList();
+            inCode = true;
+            codeLanguage = line.trim().replace(/^```/, "").trim() || "text";
+            codeLines = [];
+          }
+          continue;
+        }
+
+        if (inCode) {
+          codeLines.push(line);
+          continue;
+        }
+
+        const trimmed = line.trim();
+        if (!trimmed) {
+          closeList();
+          continue;
+        }
+
+        const unordered = trimmed.match(/^[-*]\s+(.+)$/);
+        const ordered = trimmed.match(/^\d+\.\s+(.+)$/);
+
+        if (unordered) {
+          if (listType !== "ul") {
+            closeList();
+            listType = "ul";
+            html.push("<ul>");
+          }
+          html.push(`<li>${renderInlineMarkdown(unordered[1])}</li>`);
+          continue;
+        }
+
+        if (ordered) {
+          if (listType !== "ol") {
+            closeList();
+            listType = "ol";
+            html.push("<ol>");
+          }
+          html.push(`<li>${renderInlineMarkdown(ordered[1])}</li>`);
+          continue;
+        }
+
+        closeList();
+        html.push(`<p>${renderInlineMarkdown(trimmed)}</p>`);
+      }
+
+      closeCode();
+      closeList();
+      return html.join("");
+    }
+
+    function getLastUserPrompt(chat) {
+      if (!chat || !chat.messages) return null;
+      for (let i = chat.messages.length - 1; i >= 0; i--) {
+        if (chat.messages[i].role === "user") {
+          return chat.messages[i].content;
+        }
+      }
+      return null;
+    }
+
+    function messageTemplate(message, lastUserPrompt = null) {
+      const roleLabel = message.role === "user" ? "Eu" : message.role === "error" ? "!" : "AI";
+      let visibleContent = message.visibleContent ?? message.content;
+      
+      if (highlightPromptEnabled && message.role === "assistant" && lastUserPrompt && visibleContent && !message.loading) {
+        visibleContent = highlightPromptInResponse(lastUserPrompt, visibleContent);
+      }
+      
+      const content = message.loading
+        ? '<div class="typing" aria-label="Gerando resposta"><span></span><span></span><span></span></div>'
+        : `<div class="markdown">${renderMarkdown(visibleContent)}</div>`;
+
+      return `
+        <article class="message ${message.role}">
+          <div class="avatar">${roleLabel}</div>
+          <div class="bubble">${content}</div>
+        </article>
+      `;
+    }
+
+    function renderEmptyState() {
+      messagesEl.innerHTML = `
+        <div class="empty-state">
+          <h3>💬 Converse com seu modelo local</h3>
+          <p>Digite um trecho de Python, uma pergunta ou o início de uma frase para gerar a continuação.</p>
+          <div class="quick-prompts">
+            <button type="button" data-prompt="Em uma pequena vila cercada por">🌄 Em uma pequena vila cercada por</button>
+            <button type="button" data-prompt="def soma(a, b):">🐍 def soma(a, b):</button>
+            <button type="button" data-prompt="class Carro:">🚗 class Carro:</button>
+            <button type="button" data-prompt="Explique listas em Python">📚 Explique listas em Python</button>
+          </div>
+          <p style="margin-top: 20px; font-size: 12px;">
+            🎯 <strong>Dica:</strong> Ative "Destacar Prompt" para ver qual parte foi gerada por você!
+          </p>
+        </div>
+      `;
+
+      messagesEl.querySelectorAll("[data-prompt]").forEach((button) => {
+        button.addEventListener("click", () => {
+          promptInputEl.value = button.dataset.prompt;
+          promptInputEl.focus();
+        });
+      });
+    }
+
+    function renderMessages(chat) {
+      if (!chat || chat.messages.length === 0) {
+        renderEmptyState();
+        return;
+      }
+
+      const lastUserPrompt = getLastUserPrompt(chat);
+      messagesEl.innerHTML = chat.messages.map(msg => messageTemplate(msg, lastUserPrompt)).join("");
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function renderChatList() {
+      chatListEl.innerHTML = chats
+        .map((chat) => {
+          const active = chat.id === activeChatId ? "active" : "";
+          return `<button class="chat-item ${active}" type="button" data-chat-id="${chat.id}">${escapeHtml(chat.title)}</button>`;
+        })
+        .join("");
+
+      chatListEl.querySelectorAll("[data-chat-id]").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeChatId = button.dataset.chatId;
+          render();
+        });
+      });
+    }
+
+    function render() {
+      const chat = getActiveChat();
+      chatTitleEl.textContent = chat?.title || "Novo chat";
+      sendButtonEl.disabled = isGenerating;
+      sendButtonEl.textContent = isGenerating ? "⏳ Gerando..." : "📤 Enviar";
+      renderChatList();
+      renderMessages(chat);
+    }
+
+    async function checkApiHealth() {
+      try {
+        const response = await fetch(HEALTH_URL);
+        if (!response.ok) {
+          throw new Error("API indisponivel");
+        }
+        const data = await response.json();
+        statusEl.textContent = `✅ API online (${data.device})`;
+      } catch (error) {
+        statusEl.textContent = "⚠️ API offline";
+      }
+    }
+
+    async function sendPrompt(prompt) {
+      const chat = getActiveChat();
+      if (!chat || isGenerating) {
+        return;
+      }
+
+      const temperature = Number(temperatureInputEl.value || 1);
+      const maxToken = Number(tokensInputEl.value || 100);
+
+      updateChatTitle(chat, prompt);
+      chat.messages.push({ role: "user", content: prompt });
+      chat.messages.push({ role: "assistant", content: "", loading: true });
+      isGenerating = true;
+      render();
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            prompt,
+            temperature,
+            max_token: maxToken,
+          }),
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || "Erro ao gerar resposta.");
+        }
+
+        const loadingIndex = chat.messages.findIndex((message) => message.loading);
+        if (loadingIndex >= 0) {
+          const finalContent = ensureCodeBlockWhenNeeded(prompt, data.response || "");
+          chat.messages[loadingIndex].loading = false;
+          chat.messages[loadingIndex].content = finalContent;
+          chat.messages[loadingIndex].visibleContent = "";
+          animateAssistantMessage(chat.id, loadingIndex, finalContent, prompt);
+        }
+        statusEl.textContent = `✅ API online (${data.device})`;
+      } catch (error) {
+        const loadingIndex = chat.messages.findIndex((message) => message.loading);
+        if (loadingIndex >= 0) {
+          chat.messages.splice(loadingIndex, 1);
+        }
+        chat.messages.push({
+          role: "error",
+          content: `❌ Erro: ${error.message}`,
+        });
+        statusEl.textContent = "⚠️ API com erro";
+      } finally {
+        isGenerating = false;
+        render();
+      }
+    }
+
+    function animateAssistantMessage(chatId, messageIndex, finalContent, userPrompt) {
+      if (activeTypingTimer) {
+        clearInterval(activeTypingTimer);
+      }
+
+      let cursor = 0;
+      const charsPerTick = finalContent.length > 700 ? 6 : 3;
+      const tickMs = 18;
+
+      activeTypingTimer = setInterval(() => {
+        const chat = chats.find((item) => item.id === chatId);
+        const message = chat?.messages[messageIndex];
+
+        if (!message) {
+          clearInterval(activeTypingTimer);
+          activeTypingTimer = null;
+          return;
+        }
+
+        cursor = Math.min(finalContent.length, cursor + charsPerTick);
+        let visiblePart = finalContent.slice(0, cursor);
+        
+        if (highlightPromptEnabled && userPrompt) {
+          visiblePart = highlightPromptInResponse(userPrompt, visiblePart);
+        }
+        
+        message.visibleContent = visiblePart;
+
+        if (chat.id === activeChatId) {
+          render();
+        }
+
+        if (cursor >= finalContent.length) {
+          clearInterval(activeTypingTimer);
+          activeTypingTimer = null;
+          render();
+        }
+      }, tickMs);
+    }
+
+    composerEl.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const prompt = promptInputEl.value.trim();
+      if (!prompt) {
+        return;
+      }
+      promptInputEl.value = "";
+      sendPrompt(prompt);
+    });
+
+    promptInputEl.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        composerEl.requestSubmit();
+      }
+    });
+
+    newChatButtonEl.addEventListener("click", createChat);
+
+    createChat();
+    checkApiHealth();
+    setInterval(checkApiHealth, 30000);
+  </script>
+</body>
+</html>

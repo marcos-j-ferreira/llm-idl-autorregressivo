@@ -1,89 +1,129 @@
-pergunta: Qual a cor do céu?
-resposta: Azul
+<PERGUNTA> De que cor é o céu durante o dia?
+<RESPOSTA> Azul <EOS>
 
-pergunta: De que cor é o céu durante o dia?
-resposta: Azul
+<PERGUNTA> Quanto é 2 + 2?
+<RESPOSTA> 4 <EOS>
 
-pergunta: Como normalmente vemos o céu?
-resposta: Azul
+codigo:
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+<EOS>
 
-pergunta: Qual é a cor mais comum do céu?
-resposta: Azul
+historia:
+Elias trabalhava todos os dias...
+Cada peça era montada manualmente...
+<EOS>
 
-pergunta: O céu fica de qual cor em um dia ensolarado?
-resposta: Azul
+<PERGUNTA> Qual é a capital do Brasil?
+<RESPOSTA> Brasília <EOS>
 
-pergunta: Qual cor aparece no céu sem nuvens?
-resposta: Azul
+<PERGUNTA> Quanto é 10 - 3?
+<RESPOSTA> 7 <EOS>
 
-pergunta: Quando olhamos para cima durante o dia, vemos qual cor?
-resposta: Azul
+codigo:
+def eh_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+<EOS>
 
-pergunta: O céu claro possui qual tonalidade?
-resposta: Azul
+historia:
+Maria acordou cedo naquela manhã de sol...
+O café já estava passado quando ela desceu as escadas...
+<EOS>
 
-pergunta: Em um dia bonito, o céu é de qual cor?
-resposta: Azul
+<PERGUNTA> Quem escreveu "Dom Casmurro"?
+<RESPOSTA> Machado de Assis <EOS>
 
-pergunta: Qual a principal cor do céu terrestre?
-resposta: Azul
+<PERGUNTA> Quanto é 5 * 6?
+<RESPOSTA> 30 <EOS>
 
-pergunta: O céu diurno geralmente é qual cor?
-resposta: Azul
+codigo:
+def fatorial(n):
+    if n == 0 or n == 1:
+        return 1
+    resultado = 1
+    for i in range(2, n + 1):
+        resultado *= i
+    return resultado
+<EOS>
 
-pergunta: Qual cor domina o céu ao meio-dia?
-resposta: Azul
+historia:
+O velho relógio na parede marcava meia-noite...
+Pedro ouviu um barulho estranho vindo do sótão...
+<EOS>
 
-pergunta: O céu limpo é normalmente de qual cor?
-resposta: Azul
+<PERGUNTA> De que cor é a grama saudável?
+<RESPOSTA> Verde <EOS>
 
-pergunta: Que cor vemos acima das nuvens em dias claros?
-resposta: Azul
+<PERGUNTA> Quanto é 15 / 3?
+<RESPOSTA> 5.0 <EOS>
 
-pergunta: Qual é a aparência do céu em um dia aberto?
-resposta: Azul
+codigo:
+def inverter_string(s):
+    return s[::-1]
+<EOS>
 
-pergunta: O céu sem chuva costuma ser de qual cor?
-resposta: Azul
+historia:
+Carla perdeu o ônibus naquela manhã chuvosa...
+Decidiu então tomar um café na padaria enquanto esperava o próximo...
+<EOS>
 
-pergunta: O céu possui qual cor característica?
-resposta: Azul
+<PERGUNTA> Qual é o maior planeta do Sistema Solar?
+<RESPOSTA> Júpiter <EOS>
 
-pergunta: Qual cor está associada ao céu?
-resposta: Azul
+<PERGUNTA> Quanto é 12 + 8?
+<RESPOSTA> 20 <EOS>
 
-pergunta: O céu apresenta qual cor durante a manhã?
-resposta: Azul
+codigo:
+def soma_lista(numeros):
+    return sum(numeros)
+<EOS>
 
-pergunta: Qual a tonalidade tradicional do céu?
-resposta: Azul
+historia:
+O cachorro latiu insistentemente para o carteiro...
+O carteiro, já acostumado, apenas sorriu e seguiu seu caminho...
+<EOS>
 
-pergunta: Qual a cor do oceano refletida no céu?
-resposta: Azul
+<PERGUNTA> Qual é o símbolo químico do oxigênio?
+<RESPOSTA> O <EOS>
 
-pergunta: O céu azul é conhecido por qual cor?
-resposta: Azul
+<PERGUNTA> Quanto é 100 / 4?
+<RESPOSTA> 25.0 <EOS>
 
-pergunta: Qual cor aparece no horizonte em dias claros?
-resposta: Azul
+codigo:
+def media_lista(numeros):
+    if not numeros:
+        return 0
+    return sum(numeros) / len(numeros)
+<EOS>
 
-pergunta: Em tardes ensolaradas, o céu fica de qual cor?
-resposta: Azul
+historia:
+A professora entrou na sala e todos se calaram...
+Ela tinha uma notícia importante para dar à turma...
+<EOS>
 
-pergunta: O céu costuma parecer qual cor para os humanos?
-resposta: Azul
+<PERGUNTA> Quem pintou a Mona Lisa?
+<RESPOSTA> Leonardo da Vinci <EOS>
 
-pergunta: Qual cor usamos para desenhar o céu?
-resposta: Azul
+<PERGUNTA> Quanto é 7 - 2?
+<RESPOSTA> 5 <EOS>
 
-pergunta: Em desenhos infantis, o céu geralmente é pintado de qual cor?
-resposta: Azul
+codigo:
+def palindromo(palavra):
+    palavra = palavra.lower().replace(" ", "")
+    return palavra == palavra[::-1]
+<EOS>
 
-pergunta: O céu natural possui qual cor predominante?
-resposta: Azul
-
-pergunta: O céu em clima bom fica qual cor?
-resposta: Azul
-
-pergunta: Qual a cor mais lembrada quando falamos do céu?
-resposta: Azul
+historia:
+João encontrou uma carta antiga no fundo do baú...
+Estava amarelada pelo tempo mas ainda legível...
+<EOS>

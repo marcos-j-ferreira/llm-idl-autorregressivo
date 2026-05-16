@@ -101,3 +101,630 @@ Segurando a chave de prata com firmeza ele continuou sua jornada silenciosa.
 O vento frio soprava pelas montanhas enquanto estrelas brilhavam acima do horizonte.
 Elias sentia medo do desconhecido mas também esperança em cada novo passo.
 A história do jovem guardião do tempo estava apenas começando.
+
+
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def funcao_extra_80(x, y):
+    resultado = x * y + 7
+    return resultado
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def somar_80(a, b):
+    return a + b
+
+def multiplicar(x, y):
+    return x * y
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def funcao_extra_85(x, y):
+    resultado = x * y + 20
+    return resultado
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_88(x, y):
+    resultado = x * y + 45
+    return resultado
+def multiplicar(x, y):
+    return x * y
+
+def maiusculas(texto):
+    return texto.upper()
+
+def multiplicar(x, y):
+    return x * y
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def somar_95(a, b):
+    return a + b
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_94(x, y):
+    resultado = x * y + 43
+    return resultado
+def minusculas(texto):
+    return texto.lower()
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def somar_21(a, b):
+    return a + b
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def subtracao(a, b):
+    return a - b
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def funcao_extra_104(x, y):
+    resultado = x * y + 22
+    return resultado
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def multiplicar(x, y):
+    return x * y
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def funcao_extra_108(x, y):
+    resultado = x * y + 31
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def inverter_string(texto):
+    return texto[::-1]
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def multiplicar(x, y):
+    return x * y
+
+def soma(a, b):
+    return a + b
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def menor_numero(lista):
+    return min(lista) if lista else None
+
+def potencia(base, expoente):
+    return base ** expoente
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def subtracao(a, b):
+    return a - b
+
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def funcao_extra_123(x, y):
+    resultado = x * y + 33
+    return resultado
+def soma_lista(numeros):
+    return sum(numeros)
+
+def minusculas(texto):
+    return texto.lower()
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def multiplicar(x, y):
+    return x * y
+
+def funcao_extra_127(x, y):
+    resultado = x * y + 33
+    return resultado
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def apresentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+    def aniversariar(self):
+        self.idade += 1
+        return f"Parabéns! Agora você tem {self.idade} anos."
+
+def funcao_extra_128(x, y):
+    resultado = x * y + 43
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def soma_lista(numeros):
+    return sum(numeros)
+
+def funcao_extra_132(x, y):
+    resultado = x * y + 17
+    return resultado
+def fatorial(n):
+    if n < 0:
+        return None
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+def soma(a, b):
+    return a + b
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+        self.historico = []
+    
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            self.historico.append(f"+{valor}")
+            return f"Depósito de R${valor} realizado."
+        return "Valor inválido"
+    
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            self.historico.append(f"-{valor}")
+            return f"Saque de R${valor} realizado."
+        return "Saldo insuficiente"
+
+def divisao(a, b):
+    if b == 0:
+        return 'Erro: divisao por zero'
+    return a / b
+
+def subtracao(a, b):
+    return a - b
+
+def subtracao(a, b):
+    return a - b
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_par(numero):
+    return numero % 2 == 0
+
+def multiplicar(x, y):
+    return x * y
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def eh_palindromo(palavra):
+    p = palavra.lower()
+    return p == p[::-1]
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_146(x, y):
+    resultado = x * y + 39
+    return resultado
+def subtracao(a, b):
+    return a - b
+
+def filtrar_positivos(lista):
+    return [x for x in lista if x > 0]
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    return sum(1 for letra in texto if letra in vogais)
+
+def eh_impar(numero):
+    return numero % 2 != 0
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def multiplicar(x, y):
+    return x * y
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def minusculas(texto):
+    return texto.lower()
+
+def maior_numero(lista):
+    return max(lista) if lista else None
+
+def subtracao(a, b):
+    return a - b
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+def multiplicar(x, y):
+    return x * y
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0
+    
+    def acelerar(self, valor):
+        self.velocidade += valor
+        return f"Velocidade atual: {self.velocidade} km/h"
+    
+    def frear(self, valor):
+        self.velocidade = max(0, self.velocidade - valor)
+        return f"Velocidade atual: {self.velocidade} km/h"
+
+def soma(a, b):
+    return a + b
+
+def funcao_extra_161(x, y):
+    resultado = x * y + 14
+    return resultado
+def fibonacci(n):
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    for _ in range(2, n):
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+#############################################
+
+
+pergunta: Qual a cor do céu?
+resposta: Azul
+
+pergunta: De que cor é o céu durante o dia?
+resposta: Azul
+
+pergunta: Como normalmente vemos o céu?
+resposta: Azul
+
+pergunta: Qual é a cor mais comum do céu?
+resposta: Azul
+
+pergunta: O céu fica de qual cor em um dia ensolarado?
+resposta: Azul
+
+pergunta: Qual cor aparece no céu sem nuvens?
+resposta: Azul
+
+pergunta: Quando olhamos para cima durante o dia, vemos qual cor?
+resposta: Azul
+
+pergunta: O céu claro possui qual tonalidade?
+resposta: Azul
+
+pergunta: Em um dia bonito, o céu é de qual cor?
+resposta: Azul
+
+pergunta: Qual a principal cor do céu terrestre?
+resposta: Azul
+
+pergunta: O céu diurno geralmente é qual cor?
+resposta: Azul
+
+pergunta: Qual cor domina o céu ao meio-dia?
+resposta: Azul
+
+pergunta: O céu limpo é normalmente de qual cor?
+resposta: Azul
+
+pergunta: Que cor vemos acima das nuvens em dias claros?
+resposta: Azul
+
+pergunta: Qual é a aparência do céu em um dia aberto?
+resposta: Azul
+
+pergunta: O céu sem chuva costuma ser de qual cor?
+resposta: Azul
+
+pergunta: O céu possui qual cor característica?
+resposta: Azul
+
+pergunta: Qual cor está associada ao céu?
+resposta: Azul
+
+pergunta: O céu apresenta qual cor durante a manhã?
+resposta: Azul
+
+pergunta: Qual a tonalidade tradicional do céu?
+resposta: Azul
+
+pergunta: Qual a cor do oceano refletida no céu?
+resposta: Azul
+
+pergunta: O céu azul é conhecido por qual cor?
+resposta: Azul
+
+pergunta: Qual cor aparece no horizonte em dias claros?
+resposta: Azul
+
+pergunta: Em tardes ensolaradas, o céu fica de qual cor?
+resposta: Azul
+
+pergunta: O céu costuma parecer qual cor para os humanos?
+resposta: Azul
+
+pergunta: Qual cor usamos para desenhar o céu?
+resposta: Azul
+
+pergunta: Em desenhos infantis, o céu geralmente é pintado de qual cor?
+resposta: Azul
+
+pergunta: O céu natural possui qual cor predominante?
+resposta: Azul
+
+pergunta: O céu em clima bom fica qual cor?
+resposta: Azul
+
+pergunta: Qual a cor mais lembrada quando falamos do céu?
+resposta: Azul

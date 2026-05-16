@@ -13,8 +13,9 @@ if str(LLMS_DIR) not in sys.path:
 from inferencia import LLMInference  # noqa: E402
 
 
-DEFAULT_CONFIG_PATH = LLMS_DIR / "config.json"
-DEFAULT_WEIGHTS_PATH = LLMS_DIR / "model_weights.pth"
+
+DEFAULT_CONFIG_PATH = LLMS_DIR / "./config.json"
+DEFAULT_WEIGHTS_PATH = LLMS_DIR / "./model_weights.pth"
 CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*")
 CORS_HEADERS = "Content-Type, Authorization"
 CORS_METHODS = "GET, POST, OPTIONS"

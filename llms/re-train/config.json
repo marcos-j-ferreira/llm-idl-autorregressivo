@@ -2879,17 +2879,17 @@
   },
   "training_config": {
     "micro_batch_size": 128,
-    "accumulation_steps": 1,
+    "accumulation_steps": 2,
     "learning_rate": 0.001,
     "weight_decay": 1e-05,
-    "epochs": 81,
-    "effective_batch_size": 128
+    "epochs": 54,
+    "effective_batch_size": 256
   },
   "dataset_info": {
-    "n_samples": 423,
+    "n_samples": 5362,
     "seq_len": 64,
-    "train_size": 338,
-    "val_size": 85,
+    "train_size": 4289,
+    "val_size": 1073,
     "vocab_size": 512
   },
   "device_config": {
@@ -2897,8 +2897,8 @@
     "inference_device": "cuda"
   },
   "metadata": {
-    "best_val_loss": 0.08729079365730286,
-    "timestamp": "2026-05-16T13:29:35.686489",
+    "best_val_loss": 0.08370070573356417,
+    "timestamp": "2026-05-16T14:32:30.807394",
     "model_version": "1.0"
   }
 }
