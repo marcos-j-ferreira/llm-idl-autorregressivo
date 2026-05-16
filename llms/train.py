@@ -65,7 +65,7 @@ if __name__ == "__main__":
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-5)
 
-    epochs = 10
+    epochs = 1000
 
     # Alternativa: scheduler baseado em validação (recomendado para datasets pequenos)
     # Calcular corretamente o número de steps de otimização por época
